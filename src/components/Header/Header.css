@@ -1,0 +1,68 @@
+header{
+    background-color: #121214;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        ul{
+            align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 0;
+            padding-left: 0;
+            .logo{
+                justify-content: center;
+                display: flex;
+                a{
+                    justify-content: center;
+                    display: flex;
+                }
+            }
+            .pipe{
+                display: block;
+                width: 1px;
+                height: 30px;
+                background: rgba(255,255,255,0.2);
+                margin-left: 1rem;
+                margin-right: 2rem;
+            }
+            li{
+                list-style: none;
+                .rightButton{
+                    a{
+                        padding: .5rem 2rem;
+                        border: 1px solid rgb(42, 95, 218);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        span{
+                            align-items: center;
+                            display: flex;
+                            height: 24px;
+                            font-weight: 500;
+                        }
+                        &:visited{
+                            text-decoration: none;
+                        }
+                        &:hover, &:active{
+                            background-color: rgb(42, 95, 218);
+                        }
+                    }
+                }
+                a{
+                    color: #fff;
+                    padding: .9rem 2rem;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    &:visited{
+                        text-decoration: none;
+                    }
+                    &:hover, &:active{
+                        background-color: #333;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+div{
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    .banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div.wallpaper{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            opacity: 0.8;
+        }
+        div{
+            box-sizing: border-box;
+            padding-top: 4rem;
+            color: #fff;
+            width: 70%;
+            position: relative;
+            font-weight: 400;
+            margin: 0;
+            .code{
+                font-family: 'Merriweather', serif;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                color: #fff;
+                background: linear-gradient(to right, #000000, #1f1f1f);
+                padding: 5px 15px;
+                border-radius: 5px;
+                border: 0.2px solid rgba(255,255,255,0.2);
+            }
+            h1{
+                span{
+                    font-weight: 500;
+                    background: linear-gradient(to bottom, 
+                        #ceeaff 0%, /* Mais claro */
+                        #8fc5f8 25%,
+                        #439cd7 50%, /* Cor média */
+                        #306a90 75%,
+                        #123246 100% /* Mais escuro */
+                    );
+                    -webkit-background-clip: text; /* Define a área de aplicação do gradiente como o texto */
+                    color: transparent; /* Torna o texto transparente para permitir a visualização do gradiente de fundo */
+                }
+            }
+            h3{
+                font-weight: 300;
+            }
+        }
+    }
+}
