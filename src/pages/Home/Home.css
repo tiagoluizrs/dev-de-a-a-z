@@ -1,7 +1,8 @@
 main{
     .bannerBody{
         position: relative;
-        height: 70vh;
+        max-height: 450px;
+        height: 100vh;
         width: 100%;
         .banner{
             display: flex;
@@ -151,6 +152,22 @@ main{
             color: #fff;
             font-weight: 300;
             font-size: 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        .bannerBody{
+            max-height: 550px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    main{
+        .bannerBody{
+            max-height: 650px;
         }
     }
 }

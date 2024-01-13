@@ -30,8 +30,8 @@ const Home = () => {
                             <div className="leftSign">
                                 <div className="sign">
                                     <div className="leftButton">
-                                        <Link to="/courses">
-                                            <span>VER CURSOS</span>
+                                        <Link to="#products">
+                                            <span>VER PRODUTOS</span>
                                             <span className="arrow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-2xl text-gray-100"><path d="m9 18 6-6-6-6"></path></svg>    
                                             </span>
@@ -65,9 +65,11 @@ const Home = () => {
                         <span className="code">Do 0 ao mercado_</span>
                         <h2>Conheça nossos livros e cursos</h2>
                     </div>
-                    {
-                        products.map(product => <Product product={product}/>)
-                    }
+                    <div className="container" id="products">
+                        <div className="row">
+                        {products.map(product => <div className="col col-xs-12 col-sm-12 col-md-4"><Product product={product}/></div>)}
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>

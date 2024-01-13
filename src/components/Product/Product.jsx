@@ -1,22 +1,40 @@
 import './Product.css';
 
 const Product = ({ product }) => {
-    return <div>
-        <div>
-            {product.new && !product.commingSoon ? <span>LANCAMENTO</span> : null}
-            {product.commingSoon &&  !product.new? <span>EM BREVE</span> : null}
-            <span></span>
-            <span></span>
+    const generateLevel = (level) => {
+        let levelText = '';
+        for (let i = 0; i < level; i++) {
+            levelText += '<span class="level-item level-blue"></span>';
+        }
+        const total = 5 - level;
+        for (let i = 0; i < total; i++) {
+            levelText += '<span class="level-item level-gray"></span>';
+        }
+        return  { __html: levelText };
+    }
+
+    return <div className="product">
+        <div className="product-top">
+            {product.new && !product.commingSoon ? <span className="badge">LANCAMENTO</span> : null}
+            {product.commingSoon &&  !product.new ? <span className="badge">EM BREVE!!!</span> : null}
+            <span className="skew"></span>
+            <span className="level" dangerouslySetInnerHTML={generateLevel(product.level)}></span>
+            <span className="image" style={{
+                backgroundImage: product.assetImage ? `url(./assets/images/${product.image})` : `url(${product.image})`
+            }} />
+
         </div>
-        <div>
-            <h3>{product.name}</h3>
-            <div>
-                <img src="" alt="" />
-                <h4>Autor</h4>
-                <h5>Autor</h5>
+        <div className="product-bottom">
+            <h3 className="product-name">{product.name}</h3>
+            <div className="product-box-info">
+                <img src={product.autorImage} alt="" />
+                <span>
+                    <h4>{product.autorName}</h4>
+                    <h5>{product.autorProfission}</h5>
+                </span>
             </div>
         </div>
-        <a href="#">ACESSAR</a>
+        <a href={product.commingSoon ? "#" : product.link} target="_blank" className="link">ACESSAR</a>
     </div>
 }
 

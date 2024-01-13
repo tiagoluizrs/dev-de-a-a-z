@@ -9,7 +9,9 @@ import Layout from './pages/Layout/Layout';
 import Courses from './pages/Courses/Courses';
 import whatsApplogo from './assets/images/whatsapp-logo.svg';
 
+import './assets/css/bootstrap.min.css';
 import './App.css';
+
 import Footer from './components/Footer/Footer';
 
 const App = () => {
